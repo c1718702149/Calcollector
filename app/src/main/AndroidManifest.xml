@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nocompany.calcollector" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.nocompany.calcollector.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.DepositActivity"
+            android:label="@string/title_activity_deposit"
+            android:parentActivityName="com.nocompany.calcollector.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nocompany.calcollector.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.TodoActivity"
+            android:label="@string/title_activity_todo"
+            android:parentActivityName="com.nocompany.calcollector.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nocompany.calcollector.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.UserActivity"
+            android:label="@string/title_activity_user"
+            android:parentActivityName="com.nocompany.calcollector.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nocompany.calcollector.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.BlacklistedActivity"
+            android:label="@string/title_activity_blacklisted"
+            android:parentActivityName="com.nocompany.calcollector.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nocompany.calcollector.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.DailyActivity"
+            android:label="@string/title_activity_daily"
+            android:parentActivityName="com.nocompany.calcollector.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nocompany.calcollector.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.WeeklyActivity"
+            android:label="@string/title_activity_weekly"
+            android:parentActivityName="com.nocompany.calcollector.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nocompany.calcollector.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.MonthlyActivity"
+            android:label="@string/title_activity_monthly"
+            android:parentActivityName="com.nocompany.calcollector.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nocompany.calcollector.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.BadDebtActivity"
+            android:label="@string/title_activity_bad_debt"
+            android:parentActivityName="com.nocompany.calcollector.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nocompany.calcollector.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.UserDetailsActivity"
+            android:label="@string/title_activity_user_details"
+            android:parentActivityName="com.nocompany.calcollector.UserActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nocompany.calcollector.UserActivity" />
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.UserAddActivity"
+            android:label="@string/title_activity_user_add" >
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.AccountAddActivity"
+            android:label="@string/title_activity_account_add" >
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.AccountDetailsActivity"
+            android:label="@string/title_activity_account_details" >
+        </activity>
+        <activity
+            android:name="com.nocompany.calcollector.PrimaryAccountActivity"
+            android:label="@string/title_activity_primary_account" >
+        </activity>
+    </application>
+
+</manifest>

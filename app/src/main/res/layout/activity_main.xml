@@ -1,0 +1,118 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview_mainactivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:id="@+id/linearlayout_mainactivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity">
+        <LinearLayout
+            android:id="@+id/linearlayout_deposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/button_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:src="@drawable/dashboard_1_deposit" />
+            <TextView
+                android:id="@+id/textview_deposit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/textview_deposit"
+                android:textSize="@dimen/abc_text_size_headline_material" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearlayout_todo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/button_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:src="@drawable/dashboard_2_todo" />
+            <TextView
+                android:id="@+id/textview_todo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/textview_todo"
+                android:textSize="@dimen/abc_text_size_headline_material" />
+        </LinearLayout>
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" />
+        <LinearLayout
+            android:id="@+id/linearlayout_stand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/button_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:src="@drawable/dashboard_9_stand" />
+            <TextView
+                android:id="@+id/textview_stand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/textview_stand"
+                android:textSize="@dimen/abc_text_size_headline_material" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearlayout_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/button_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:src="@drawable/dashboard_10_users" />
+            <TextView
+                android:id="@+id/textview_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/textview_user"
+                android:textSize="@dimen/abc_text_size_headline_material" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+

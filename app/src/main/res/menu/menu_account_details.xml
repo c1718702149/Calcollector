@@ -1,0 +1,14 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.nocompany.calcollector.AccountDetailsActivity">
+    <item
+        android:id="@+id/action_pay_all"
+        android:title="@string/action_pay_all"
+        android:orderInCategory="1"/>
+    <item
+        android:id="@+id/action_account_oncredit"
+        android:title="@string/action_account_oncredit"
+        android:visible="false"
+        android:orderInCategory="2" />
+</menu>

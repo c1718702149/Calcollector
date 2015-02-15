@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\pre-dexed\debug\classes-bc49cbdaa556c8234607b7f9ec05267210626026.jar"
+        jar="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0c0c19759e5868604a3b4c2c0074ee9404d73c76"/>
+    <item
+        dex="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-d1d0dc8eda1d6d6c68296aa38b130ada71fbf98f.jar"
+        jar="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
+    <item
+        dex="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\pre-dexed\debug\classes-c2f311756b86ad9deacc83532593acf495660edc.jar"
+        jar="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\exploded-aar\com.roomorama\caldroid\1.1.7\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="e02efe7335133aac3c2f1c28dd3bd19b55359fd0"/>
+    <item
+        dex="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\pre-dexed\debug\hirondelle-date4j-1.5.1-eb9fe6898f52d87624e5a7727a848cf5651cd680.jar"
+        jar="C:\Users\Ong Chia Hooi\.gradle\caches\modules-2\files-2.1\com.darwinsys\hirondelle-date4j\1.5.1\7b52de513f87ae4d9ff5d17518def0a1e9bc3df0\hirondelle-date4j-1.5.1.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="7b52de513f87ae4d9ff5d17518def0a1e9bc3df0"/>
+    <item
+        dex="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-0021f2a7ea473042d6457ad22694e10770ebabee.jar"
+        jar="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.0\libs\internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="5a8e01742aee890c56fe638ea7c921b91a3fdc62"/>
+    <item
+        dex="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-fcc99586f20f9d1b4ef65f4c2094c6e6ba5dd766.jar"
+        jar="D:\Android-Workspace\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
+    <item
+        dex="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\pre-dexed\debug\classes-28249d875fb7049058f7c90505d839999e6ff0b4.jar"
+        jar="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="95fd37732ec852e99f07eeb516a3650172f1d136"/>
+    <item
+        dex="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\pre-dexed\debug\classes-d9b306939f7575c6b817251cf4e5526a23f100b5.jar"
+        jar="D:\Android-Workspace\Projects\CalCollector\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
+
+</pre-dex-items>

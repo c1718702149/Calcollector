@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CalCollector</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="title_activity_main">Dashboard</string>
+    <string name="textview_deposit">RM %s</string>
+    <string name="textview_todo">To Do List</string>
+    <string name="textview_stand">Stand</string>
+    <string name="textview_user">Person</string>
+
+    <color name="button_background">#E4E3E5</color>
+    <color name="list_background">#E4E3E5</color>
+    <color name="font_color">#808284</color>
+    <color name="no_background">#808284</color>
+    <color name="account_created">#258aaf</color>
+    <color name="account_oncredit">#FFE76D</color>
+    <color name="account_paid">#72C6A6</color>
+    <color name="account_next_unpaid">#EF484D</color>
+    <color name="account_unpaid">#80EF484D</color>
+    <color name="account_baddebt">#964F36</color>
+    <color name="account_line_paid">#72C6A6</color>
+    <color name="account_line_unpaid">#EF484D</color>
+    <color name="account_line_oncredit">#FFE76D</color>
+    <color name="edittext_font_color">#000000</color>
+    <color name="button_contrast_background">#808284</color>
+    <color name="button_contrast_font_color">#E4E3E5</color>
+    <color name="not_valid">#EF484D</color>
+    <color name="valid">#72C6A6</color>
+    <color name="white">#ffffff</color>
+    <color name="todo_delay">#964F36</color>
+    <color name="todo_today">#EF484D</color>
+    <color name="todo_tomorrow">#EF9A9E</color>
+
+    <string name="title_activity_deposit">Deposit</string>
+    <string name="title_activity_todo">Today Collect</string>
+    <string name="title_activity_user">Person</string>
+    <string name="editText_quickSearch_hint_person">Search name here</string>
+    <string name="action_add_person">Add Person</string>
+    <string name="title_activity_blacklisted">Blacklist</string>
+    <string name="title_activity_daily">Daily Account</string>
+    <string name="title_section1">Fixed Account</string>
+    <string name="title_section2">Flexible Account</string>
+    <string name="action_addAccount">Add Account</string>
+    <string name="editText_quickSearch_hint_account">Search account here</string>
+    <string name="title_activity_weekly">Weekly Account</string>
+    <string name="title_activity_monthly">Monthly Account</string>
+    <string name="title_activity_bad_debt">Bad Debt</string>
+    <string name="title_activity_user_details">Person Details</string>
+    <string name="action_edit">Edit Value</string>
+    <string name="action_add">Add Value</string>
+    <string name="default_string">Hello World</string>
+    <string name="textview_ic_no_title">IC. No:</string>
+    <string name="textview_address_title">Address:</string>
+    <string name="textview_contact_no_title">Contact No:</string>
+    <string name="textview_accounts_title">Accounts:</string>
+    <string name="textview_accounts_no_record">Click the button to add account</string>
+    <string name="hand_pointing_up">Pointing</string>
+    <string name="textview_date_title">Date</string>
+    <string name="textview_amount_title">Amount</string>
+    <string name="textview_city">City:</string>
+    <string name="textview_state">State:</string>
+    <string name="textview_type">Type</string>
+    <string name="title_activity_user_add">New Person</string>
+    <string name="prompt_malaysia_states">Choose a State</string>
+    <string name="textview_account_amount">Total Amount:</string>
+    <string name="textview_account_disbursement">Disbursement:</string>
+    <string name="textview_account_installment">Installment:</string>
+    <string name="textview_account_length">Duration:</string>
+
+    <string-array name="array_malaysia_states">
+        <item>@string/state_penang</item>
+        <item>Kuala Lumpur</item>
+        <item>Sarawak</item>
+        <item>Selangor</item>
+        <item>Labuan</item>
+        <item>Negeri Sembilan</item>
+        <item>Melaka</item>
+        <item>Pahang</item>
+        <item>Johor</item>
+        <item>Terengganu</item>
+        <item>Sabah</item>
+        <item>Perak</item>
+        <item>Perlis</item>
+        <item>Kedah</item>
+        <item>Kelantan</item>
+    </string-array>
+
+    <string name="state_penang">Penang</string>
+    <string name="title_activity_account_add">New Account</string>
+    <string name="action_add_deposit">Add Deposit</string>
+    <string name="action_take_deposit">Take Deposit</string>
+    <string name="dialog_add_deposit_title">@string/action_add_deposit</string>
+    <string name="dialog_take_deposit_title">@string/action_take_deposit</string>
+    <string name="textview_add_amount">Amount: </string>
+    <string name="textview_pay_all">Pay All: </string>
+    <string name="textview_account_oncredit">On Credit</string>
+    <string name="dialog_on_credit_title">@string/action_account_oncredit</string>
+    <string name="dialog_positive">Yes</string>
+    <string name="dialog_negative">Cancel</string>
+    <string name="actionbar_title_daily_fixed">Daily Fixed</string>
+    <string name="actionbar_title_daily_flexi">Daily Flexi</string>
+    <string name="actionbar_title_weekly_fixed">Weekly Fixed</string>
+    <string name="actionbar_title_weekly_flexi">Weekly Flexi</string>
+    <string name="actionbar_title_monthly_fixed">Monthly Fixed</string>
+    <string name="actionbar_title_monthly_flexi">Monthly Flexi</string>
+    <string name="title_activity_account_details">Account Details</string>
+    <string name="action_pay_all">Pay All Amount</string>
+    <string name="action_account_oncredit">On Credit</string>
+    <string name="dialog_add_money_title">Pay Money</string>
+    <string name="dialog_full_payment">Full Payment</string>
+    <string name="indicator_account_created_date">Account Created Date</string>
+    <string name="indicator_account_on_credit_date">On Credit Date</string>
+    <string name="indicator_account_paid_date">Paid</string>
+    <string name="indicator_account_next_paid_date">Next Pay Day</string>
+    <string name="indicator_account_unpaid_date">Unpaid</string>
+    <string name="textview_money">RM %s</string>
+    <string name="title_activity_primary_account">Primary Account</string>
+    <string name="action_add_spending">Add Spending</string>
+    <string name="action_add_stand">Add Stand</string>
+    <string name="dialog_add_spend_title">Pay Out Item</string>
+    <string name="textview_item_remark">Remarks: </string>
+    <string name="textview_item_price">Amount: </string>
+    <string name="textview_item_receiver">Receiver: </string>
+    <string name="spinner_default_text">Select a person </string>
+    <string name="dialog_add_stand_title">Stand</string>
+</resources>
