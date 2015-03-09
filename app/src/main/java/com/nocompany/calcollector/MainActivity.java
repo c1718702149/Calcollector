@@ -15,21 +15,14 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.LinearLayout;
-//import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
-//import java.util.HashMap;
-
 
 public class MainActivity extends ActionBarActivity {
 
-//    String TAG = ((Object)MainActivity.this).getClass().getSimpleName();
-
     private Display display;
-//    private int screenWidth;
-//    private int screenHeight;
     private int screenOrientation;
 
     private LinearLayout linearlayout_deposit = null;
@@ -40,9 +33,6 @@ public class MainActivity extends ActionBarActivity {
     private TextView textview_deposit = null;
 
     private SessionManager session;
-//    private String name;
-//    private String email;
-
     private DatabaseHandler database;
     private ArrayList<ContentValues> accountList;
 
@@ -59,8 +49,6 @@ public class MainActivity extends ActionBarActivity {
         display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
-//        screenWidth = size.x;
-//        screenHeight = size.y;
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.drawable.ic_launcher);
@@ -163,9 +151,6 @@ public class MainActivity extends ActionBarActivity {
     private void getSessionProperties() {
         session = new SessionManager(getApplicationContext());
         session.checkLogin();
-//        HashMap<String, String> user = session.getUserDetails();
-//        name = user.get(SessionManager.KEY_NAME);
-//        email = user.get(SessionManager.KEY_EMAIL);
     }
 
     @Override

@@ -34,6 +34,8 @@ public class CalCollectorVariables {
     public static final int ACCOUNT_LINE_TYPE_DISBURSEMENT = 1;
     public static final int ACCOUNT_LINE_TYPE_CREDIT = 2;
 
+    public static final String USER_CREDENTIAL_DELIMITER = "[C]";
+
     public static final String INTENT_USER_ID = "INTENT_USER_ID";
     public static final String INTENT_USER_NAME = "INTENT_USER_NAME";
     public static final String HOST_NAME = "IAMHOST";
