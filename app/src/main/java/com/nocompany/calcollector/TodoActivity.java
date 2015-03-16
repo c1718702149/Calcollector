@@ -219,7 +219,6 @@ public class TodoActivity extends ActionBarActivity {
         if(accountList.size() > 0){
             for(ContentValues account : accountList){
                 Calendar cal = Calendar.getInstance();
-//                cal.setTime(formatStringToDate(account.getAsString(Account.TableAccount.COLUMN_NAME_CREATED_AT)));
                 cal.setTime(formatStringToDate(account.getAsString(AccountLine.TableAccountLine.COLUMN_NAME_CREATED_AT)));
                 int accountType = account.getAsInteger(Account.TableAccount.COLUMN_NAME_TYPE);
                 int intervalType = Calendar.DATE;
