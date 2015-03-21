@@ -53,4 +53,6 @@ public class CalCollectorVariables {
 
     public static final String RECEIVER_REMARK_DELIMITER = "[R]";
     public static final String INTENT_ACCOUNT_TYPE = "INTENT_ACCOUNT_TYPE";
+
+    public static final String LOGIN_TODO_ACTIVITY_ID = "LOGIN_TODO_ACTIVITY_ID";
 }

@@ -30,9 +30,8 @@ public class AlarmService extends IntentService {
     private void sendNotification(String msg) {
         mNotificationManager = (NotificationManager)
                 this.getSystemService(Context.NOTIFICATION_SERVICE);
-
-        PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, TodoActivity.class), 0);
+        Intent todo = new Intent(this, TodoActivity.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, todo, 0);
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
@@ -41,11 +40,14 @@ public class AlarmService extends IntentService {
                         .setStyle(new NotificationCompat.BigTextStyle()
                                 .bigText(msg))
                         .setContentText(msg)
-                        .setVibrate(new long[]{1000, 1000, 1000, 1000, 1000});
+                        .setVibrate(new long[]{1000, 1000, 1000, 1000, 1000})
+                        .setAutoCancel(true);
         Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         mBuilder.setSound(alarmSound);
 
         mBuilder.setContentIntent(contentIntent);
         mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
     }
+
+
 }

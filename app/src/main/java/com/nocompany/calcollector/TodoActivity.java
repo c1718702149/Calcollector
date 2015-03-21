@@ -2,6 +2,7 @@ package com.nocompany.calcollector;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.format.DateUtils;
@@ -59,9 +60,9 @@ public class TodoActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo);
+        getSessionProperties();
         setupLayoutVariable();
         setupLayoutFunction();
-        getSessionProperties();
     }
 
     private void setupLayoutVariable() {
@@ -101,7 +102,13 @@ public class TodoActivity extends ActionBarActivity {
 
     private void getSessionProperties() {
         session = new SessionManager(getApplicationContext());
-        session.checkLogin();
+        if(!session.isLoggedIn()){
+            Intent i = new Intent(this, LoginActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            this.startActivity(i);
+            finish();
+        }
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -412,5 +419,17 @@ public class TodoActivity extends ActionBarActivity {
     protected void onStop() {
         super.onStop();
         finish();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
