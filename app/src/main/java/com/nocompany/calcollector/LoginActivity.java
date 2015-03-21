@@ -35,16 +35,25 @@ public class LoginActivity extends Activity {
     private EditText edittext_password;
     private ArrayList<String> arrayListErrorMessage;
 
+    private boolean todoActivity = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        checkTODOActivity();
         setupViewVariables();
         createUser();
         session = new SessionManager(getApplicationContext());
         if(session.isLoggedIn()){
             startActivity(new Intent(this, MainActivity.class));
             finish();
+        }
+    }
+
+    private void checkTODOActivity(){
+        if(getIntent() != null){
+            todoActivity = getIntent().getBooleanExtra(CalCollectorVariables.LOGIN_TODO_ACTIVITY_ID, false);
         }
     }
 
@@ -144,7 +153,12 @@ public class LoginActivity extends Activity {
                 if(parameters[0] != null && parameters[1] != null){
                     if(parameters[0].equals(username) && parameters[1].equals(password)){
                         session.createLoginSession(parameters[0], parameters[2]);
-                        startActivity(new Intent(this, MainActivity.class));
+                        if(todoActivity){
+                            startActivity(new Intent(this, TodoActivity.class));
+                        }
+                        else{
+                            startActivity(new Intent(this, MainActivity.class));
+                        }
                         finish();
                     }
                     else{

@@ -104,6 +104,12 @@ public class TodoActivity extends ActionBarActivity {
         session = new SessionManager(getApplicationContext());
         if(!session.isLoggedIn()){
             Intent i = new Intent(this, LoginActivity.class);
+            if(getIntent() != null){
+                boolean boolExtras = getIntent().getBooleanExtra(CalCollectorVariables.LOGIN_TODO_ACTIVITY_ID, false);
+                if(boolExtras){
+                    i.putExtra(CalCollectorVariables.LOGIN_TODO_ACTIVITY_ID, true);
+                }
+            }
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             this.startActivity(i);

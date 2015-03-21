@@ -31,7 +31,8 @@ public class AlarmService extends IntentService {
         mNotificationManager = (NotificationManager)
                 this.getSystemService(Context.NOTIFICATION_SERVICE);
         Intent todo = new Intent(this, TodoActivity.class);
-        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, todo, 0);
+        todo.putExtra(CalCollectorVariables.LOGIN_TODO_ACTIVITY_ID, true);
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, todo, PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
