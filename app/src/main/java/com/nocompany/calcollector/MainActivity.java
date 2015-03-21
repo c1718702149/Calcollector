@@ -1,9 +1,16 @@
 package com.nocompany.calcollector;
 
+import android.app.AlarmManager;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Point;
+import android.os.SystemClock;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Display;
@@ -19,6 +26,7 @@ import android.widget.TextView;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -35,6 +43,8 @@ public class MainActivity extends ActionBarActivity {
     private SessionManager session;
     private DatabaseHandler database;
     private ArrayList<ContentValues> accountList;
+
+    NotificationMessage notification = new NotificationMessage();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,7 +159,7 @@ public class MainActivity extends ActionBarActivity {
     };
 
     private void getSessionProperties() {
-        session = new SessionManager(getApplicationContext());
+        session = new SessionManager(this);
         session.checkLogin();
     }
 
@@ -157,6 +167,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onStart() {
         super.onStart();
         setupDatabase();
+        notification.setAlarm(this);
     }
 
     private void setupDatabase() {
@@ -224,5 +235,11 @@ public class MainActivity extends ActionBarActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
     }
 }

@@ -14,6 +14,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -52,12 +53,15 @@ public class TodoActivity extends ActionBarActivity {
     private Animation slideUp;
     private Animation slideDown;
 
+    private SessionManager session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo);
         setupLayoutVariable();
         setupLayoutFunction();
+        getSessionProperties();
     }
 
     private void setupLayoutVariable() {
@@ -93,6 +97,11 @@ public class TodoActivity extends ActionBarActivity {
         linearlayout_todo_delay_header.setOnClickListener(onClickListener);
         linearlayout_todo_today_header.setOnClickListener(onClickListener);
         linearlayout_todo_tomorrow_header.setOnClickListener(onClickListener);
+    }
+
+    private void getSessionProperties() {
+        session = new SessionManager(getApplicationContext());
+        session.checkLogin();
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -397,5 +406,11 @@ public class TodoActivity extends ActionBarActivity {
 
         }
         return dateTime;
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
     }
 }

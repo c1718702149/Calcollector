@@ -1,29 +1,55 @@
 package com.nocompany.calcollector;
 
-import android.app.Notification;
-import android.app.NotificationManager;
+import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.NotificationCompat;
+import android.content.pm.PackageManager;
+import android.support.v4.content.WakefulBroadcastReceiver;
 
-public class NotificationMessage extends BroadcastReceiver {
+import java.util.Calendar;
+
+public class NotificationMessage extends WakefulBroadcastReceiver {
+
+    private AlarmManager alarmMgr;
+    private PendingIntent alarmIntent;
+
     @Override
     public void onReceive(Context context, Intent intent) {
-        showNotification(context);
+        Intent service = new Intent(context, AlarmService.class);
+        startWakefulService(context, service);
     }
 
-    private void showNotification(Context context) {
-        PendingIntent contentIntent = PendingIntent.getActivity(context, 0, new Intent(context, NotificationMessage.class), 0);
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context)
-                .setSmallIcon(R.drawable.ic_launcher)
-                .setContentTitle("xyz")
-                .setContentText("It will contain dummy content");
-        mBuilder.setContentIntent(contentIntent);
-        mBuilder.setDefaults(Notification.DEFAULT_SOUND);
-        mBuilder.setAutoCancel(true);
-        NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.notify(1, mBuilder.build());
+    public void setAlarm(Context context) {
+        alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(context, NotificationMessage.class);
+        alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(System.currentTimeMillis());
+        calendar.set(Calendar.HOUR_OF_DAY, 8);
+        calendar.set(Calendar.MINUTE, 30);
+        alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP,
+                calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
+
+        ComponentName receiver = new ComponentName(context, BootReceiver.class);
+        PackageManager pm = context.getPackageManager();
+
+        pm.setComponentEnabledSetting(receiver,
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.DONT_KILL_APP);
+    }
+
+    public void cancelAlarm(Context context) {
+        if (alarmMgr!= null) {
+            alarmMgr.cancel(alarmIntent);
+        }
+        ComponentName receiver = new ComponentName(context, BootReceiver.class);
+        PackageManager pm = context.getPackageManager();
+
+        pm.setComponentEnabledSetting(receiver,
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                PackageManager.DONT_KILL_APP);
     }
 }
