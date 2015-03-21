@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nocompany.calcollector" >
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -110,6 +114,16 @@
             android:name="com.nocompany.calcollector.PrimaryAccountActivity"
             android:label="@string/title_activity_primary_account" >
         </activity>
+
+        <receiver android:name=".NotificationMessage" />
+        <receiver android:name=".BootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".AlarmService" android:enabled="true" />
+
     </application>
 
 </manifest>
