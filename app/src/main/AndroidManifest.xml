@@ -5,6 +5,10 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
 
     <application
         android:allowBackup="true"
@@ -112,7 +116,11 @@
         </activity>
         <activity
             android:name="com.nocompany.calcollector.PrimaryAccountActivity"
-            android:label="@string/title_activity_primary_account" >
+            android:label="@string/title_activity_primary_account"
+            android:parentActivityName="com.nocompany.calcollector.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nocompany.calcollector.MainActivity" />
         </activity>
 
         <receiver android:name=".NotificationMessage" />
@@ -123,6 +131,29 @@
             </intent-filter>
         </receiver>
         <service android:name=".AlarmService" android:enabled="true" />
+
+        <service android:name=".accounts.GenericAccountService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        
+        <provider
+            android:name="com.nocompany.calcollector.provider.StubProvider"
+            android:authorities="com.nocompany.calcollector.provider"
+            android:exported="false"
+            android:syncable="true" />
+
+        <service android:name=".SyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
 
     </application>
 
